@@ -1,0 +1,27 @@
+Git Setup on Windows
+
+previous:
+download git bash
+
+1. [Generate SSH key]
+ssh-keygen -t rsa -b 4096 -C "youremail"
+enter rest
+2. [Add SSH Key to SSH agent]
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+#----- already set up SSH key on computer ------
+
+3. [Connect SSH key to github account]
+open github webpage, go to setting --> SSH
+fill up Title, key
+clip < ~/.ssh/id_rsa.pub --> already copy
+and paste to the key field
+press add ssh key
+
+4. [git command]
+git init
+git clone [project name]git@github.com:may811204/hand_orientation_detection.git
+git add *
+git commit -m "commit message"
+git push -u origin
+
