@@ -1,8 +1,9 @@
 #! /bin/bash
-
-git add *
-echo "Please input the commit command > "
-read commit_log
-git commit -m $commit_log
-git push -u origin
-git log
+git add .
+echo 'Enter the commit message:'
+read commitMessage
+git commit -m "$commitMessage"
+echo 'Enter the name of the branch:'
+read branch
+git push origin $branch
+read
